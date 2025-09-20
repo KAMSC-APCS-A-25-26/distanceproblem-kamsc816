@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import Math.util.Scanner;
 
 public class Distance {
   public static void main(String[] args) {
