@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import Math.util.Scanner;
+import java.util.Math;
 
 public class Distance {
   public static void main(String[] args) {
@@ -20,7 +20,7 @@ public class Distance {
       int y2 = Integer.parseInt(parts[3]);
       double dist = Math.sqrt(Math.pow(x2-x1,2) + Math.pow(y2-y1,2));
 
-      System.out.println(dist);
+      System.out.println("Distance: " + dist);
     }
     
   }
