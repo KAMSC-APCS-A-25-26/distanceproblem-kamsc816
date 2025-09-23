@@ -25,15 +25,30 @@
  *  Enter input 3 (like (x1,y1)(x2,y2)): (-1,-2)(0,7)
  *
  */
-
-
 import java.util.Scanner;
-
-
 public class DistanceMultiple {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+//asdfas
+        System.out.println("Number of runs: ");
+        int numRuns = sc.nextInt();
+        sc.nextLine(); 
 
+        for (int i = 0; i < numRuns; i++) {
+            System.out.println("Enter your two coordinate pairs (like (2,3) (5,7)): ");
+
+
+            String coordinates = sc.nextLine();
+            Scanner scan = new Scanner(coordinates);
+            scan.useDelimiter("[(),\\s]+");
+            int x1 = scan.nextInt();
+            int y1 = scan.nextInt();
+            int x2 = scan.nextInt();
+            int y2 = scan.nextInt();
+
+            double dist = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+            System.out.println("Distance: " + dist);
+        }
 
     }
-
 }
