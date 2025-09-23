@@ -36,18 +36,17 @@ public class DistanceMultiple {
 
         for (int i = 0; i < numRuns; i++) {
             System.out.println("Enter your two coordinate pairs (like (2,3) (5,7)): ");
+
+
             String coordinates = sc.nextLine();
-
-            String coords = coordinates.replaceAll("[()]", ""); 
-            String[] parts = coords.split("[,\\s]+");          
-
-            int x1 = Integer.parseInt(parts[0]);
-            int y1 = Integer.parseInt(parts[1]);
-            int x2 = Integer.parseInt(parts[2]);
-            int y2 = Integer.parseInt(parts[3]);
+            Scanner scan = new Scanner(coordinates);
+            scan.useDelimiter("[(),\\s]+");
+            int x1 = scan.nextInt();
+            int y1 = scan.nextInt();
+            int x2 = scan.nextInt();
+            int y2 = scan.nextInt();
 
             double dist = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
-
             System.out.println("Distance: " + dist);
         }
 
